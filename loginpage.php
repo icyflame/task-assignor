@@ -26,6 +26,7 @@ else{
 
 	while($row = mysql_fetch_assoc($res)){
 
+		$tid = $row['taskid'];
 		$desc = $row['taskdesc'];
 		$nor = $row['assignor'];
 		$nee = $row['assignee'];
@@ -33,7 +34,7 @@ else{
 		$adddate = $row['adddate'];
 		$rem = $row['remarks'];
 
-		echo "<tr><td>$deadline</td><td>$desc<td>$nor</td><td>$nee</td><td>$adddate</td><td>$rem</td></tr>";
+		echo "<tr><td>$deadline</td><td>$desc<td>$nor</td><td>$nee</td><td>$adddate</td><td><form action='updaterem.php' method='POST'><input type='text' name='$tid' value='$rem'></input><input type='submit'></form></td></tr>";
 
 	}
 
