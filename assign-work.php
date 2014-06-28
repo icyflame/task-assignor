@@ -13,7 +13,7 @@ require 'connect.php';
 
 if(!empty($_POST)){
 
-    if(isset($_POST['desc']) && isset($_POST['dl']) && isset($_POST['assignee'])){
+	if(isset($_POST['desc']) && isset($_POST['dl']) && isset($_POST['assignee'])){
 
 		echo $_POST['desc'].'<br/>';
 		echo $_POST['dl'].'<br/>';
@@ -32,12 +32,12 @@ if(!empty($_POST)){
 			// Finding the task ID
 
 			$check = mysql_query("SELECT COUNT(*) FROM `tasks`");                
-    		$row = mysql_fetch_array($check);
-            $taskid = $row[0] + 1;
+			$row = mysql_fetch_array($check);
+			$taskid = $row[0] + 1;
 
 
 			$assignor = $_SESSION['username'];
-            $add = date('Y-m-d',time());
+			$add = date('Y-m-d',time());
 
 			$query = "INSERT INTO `tasks` VALUES('$taskid', '$desc', '$assignor', '$assignee', '$date', '$add', 'Not Updated')";
 
@@ -162,7 +162,7 @@ if(!empty($_POST)){
 				Assign this to: 
 			</td>
 			<td>
-<!--				<input type="text" name="assignee1"/> -->
+				<!--				<input type="text" name="assignee1"/> -->
 				<?php
 
 				$query = "SELECT * FROM `users` ORDER BY position DESC";

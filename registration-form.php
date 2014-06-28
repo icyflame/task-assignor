@@ -10,7 +10,6 @@ if(!empty($_POST)){
 	echo $_POST['ln'].'<br/>';
 	echo $_POST['pos'].'<br/>';
 
-
 	if(isset($_POST['un']) && isset($_POST['pw']) && isset($_POST['fn']) && isset($_POST['ln']) && isset($_POST['pos'])){
 
 		$user = $_POST['un'];
