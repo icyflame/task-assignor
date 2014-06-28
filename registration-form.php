@@ -29,7 +29,17 @@ if(!empty($_POST)){
 
 		else{
 
-			$query = "INSERT INTO `users` VALUES('$user', '$pass', '$firs', '$last', '$mail', '$posi')";
+			// find the integer userID.
+
+			$query = 'SELECT COUNT(*) FROM `users`';
+
+			$res = mysql_query($query);
+
+			$row = mysql_fetch_array($res);
+
+			$userid = $row[0] + 1;
+
+			$query = "INSERT INTO `users` VALUES('$userid', '$user', '$pass', '$firs', '$last', '$mail', '$posi')";
 		// $query = "INSERT INTO users VALUES (".$_POST['un'].')';
 
 			echo $query.'<br/>';
