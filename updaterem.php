@@ -22,13 +22,22 @@ foreach ($_POST as $key => $entry)
 	echo $query.'<br/>';
 
 	if (mysql_query($query)){
-		echo 'Remarks have been updated';
+		echo '<h1>Remarks have been updated</h1>';
 
 	}
 
 	else{
 		echo mysql_error();
 	}
+
+	echo"<script>
+	window.onload = window.setTimeout(re,1500);
+	function re(){
+		window.location = 'loginpage.php';
+	}
+	</script>";
+
+	echo "<h3>You will now be redirected to the <a href='loginpage.php'>previous page</a>.</h3>";
 
 }
 
