@@ -21,8 +21,8 @@ while($row = mysql_fetch_assoc($res)){
 
 echo "</table>";
 
-echo "<p><b>Note that you can assign work only to members who have a position value more than yours</b></p>"
+echo "<p><b>Note that you can assign work only to members who have a position value more than yours</b></p>";
 
-echo "<p>(Lower your position value, higher you are in the heirarchy)</p>"
+echo "<p>(Lower your position value, higher you are in the heirarchy)</p>";
 
 ?>
