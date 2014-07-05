@@ -35,7 +35,6 @@ if(!empty($_POST)){
 			$row = mysql_fetch_array($check);
 			$taskid = $row[0] + 1;
 
-
 			$assignor = $_SESSION['username'];
 			$add = date('Y-m-d',time());
 
@@ -145,7 +144,7 @@ if(!empty($_POST)){
 					</td>
 
 					<td>
-						<textarea name="desc" rows="15" cols=""></textarea>
+						<textarea name="desc" rows="15" cols="30"></textarea>
 					</td>
 
 				</tr>
