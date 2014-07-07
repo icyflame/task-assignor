@@ -11,7 +11,7 @@ while($row = mysql_fetch_assoc($res)){
 	$deadline = $row['deadline'];
 	$adddate = $row['adddate'];
 	$rem = $row['remarks'];
-	$stat = $row['taskstatus']
+	$stat = $row['taskstatus'];
 
 	echo "<tr><td>$deadline</td><td>$desc<td>$nor</td><td>$nee</td><td>$adddate</td><td><form action='updaterem.php' method='POST'><input type='text' name='$tid' value='$rem'></input>";
 

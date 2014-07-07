@@ -5,12 +5,16 @@ session_start();
 require 'checklogin.php';
 require 'connect.php';
 
-echo $_POST['1'];
-echo '<br/>'.$_POST;
+// echo $_POST['1'];
+// echo '<br/>'.$_POST;
 
 echo '<br/><br/>';
 
 print_r($_POST);
+
+echo '<br/>';
+
+$newstat = $_POST['status'];
 
 foreach ($_POST as $key => $entry)
 {
@@ -19,10 +23,13 @@ foreach ($_POST as $key => $entry)
 
 	$query = "UPDATE `tasks` SET remarks='$entry' WHERE taskid='$key'";
 
-	echo $query.'<br/>';
+	$query2 = "UPDATE `tasks` SET taskstatus='$newstat' WHERE taskid='$key'";
 
-	if (mysql_query($query)){
-		echo '<h1>Remarks have been updated</h1>';
+	echo $query.'<br/>';
+	echo $query2.'<br/>';
+
+	if (mysql_query($query) && mysql_query($query2)){
+		echo '<h1>Remarks and Task Status have been updated</h1>';
 
 	}
 
@@ -30,15 +37,18 @@ foreach ($_POST as $key => $entry)
 		echo mysql_error();
 	}
 
-	echo"<script>
-	window.onload = window.setTimeout(re,1500);
-	function re(){
-		window.location = 'loginpage.php';
-	}
-	</script>";
-
-	echo "<h3>You will now be redirected to the <a href='loginpage.php'>previous page</a>.</h3>";
+	break;
 
 }
+
+// echo"<script>
+	// window.onload = window.setTimeout(re,1500);
+	// function re(){
+	// 	window.location = 'homepage.php';
+	// }
+	// </script>";
+
+echo "<h3>You will now be redirected to the <a href='homepage.php'>previous page</a>.</h3>";
+
 
 ?>
