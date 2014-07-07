@@ -35,7 +35,7 @@ if(!empty($_POST)){
             $_SESSION['loggedin'] = 1;
             $_SESSION['username'] = $_POST['un'];
             
-            echo "<script> document.location='loginpage.php'; </script>";
+            echo "<script> document.location='homepage.php'; </script>";
             exit;
             
 		}
