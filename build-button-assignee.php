@@ -12,4 +12,10 @@ elseif($stat == 1){
 
 }
 
+elseif($stat == 2){
+
+	echo "Task has been completed."
+	
+}
+
 ?>
