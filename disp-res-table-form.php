@@ -15,9 +15,13 @@ while($row = mysql_fetch_assoc($res)){
 
 	echo "<tr><td>$deadline</td><td>$desc<td>$nor</td><td>$nee</td><td>$adddate</td><td><form action='updaterem.php' method='POST'><input type='text' name='$tid' value='$rem'></input>";
 
-	echo "<select name='status'><option>0</option><option>1</option><option>2</option></select>";
+	// echo "<select name='status'><option>0</option><option>1</option><option>2</option></select>";
 
-	echo "<input type='submit'></form></td></tr>";
+	echo "<input type='submit'></form></td>";
+
+	include 'build-button.php';
+
+	echo "</tr>";
 
 }
 

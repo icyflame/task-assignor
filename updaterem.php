@@ -14,7 +14,7 @@ print_r($_POST);
 
 echo '<br/>';
 
-$newstat = $_POST['status'];
+// $newstat = $_POST['status'];
 
 foreach ($_POST as $key => $entry)
 {
@@ -23,13 +23,14 @@ foreach ($_POST as $key => $entry)
 
 	$query = "UPDATE `tasks` SET remarks='$entry' WHERE taskid='$key'";
 
-	$query2 = "UPDATE `tasks` SET taskstatus='$newstat' WHERE taskid='$key'";
+	// $query2 = "UPDATE `tasks` SET taskstatus='$newstat' WHERE taskid='$key'";
 
 	echo $query.'<br/>';
-	echo $query2.'<br/>';
+	// echo $query2.'<br/>';
 
-	if (mysql_query($query) && mysql_query($query2)){
-		echo '<h1>Remarks and Task Status have been updated</h1>';
+	if (mysql_query($query)) { // && mysql_query($query2)){
+
+		echo '<h1>Remarks have been updated</h1>';
 
 	}
 
