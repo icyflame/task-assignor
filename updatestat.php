@@ -5,32 +5,21 @@ session_start();
 require 'checklogin.php';
 require 'connect.php';
 
-// echo $_POST['1'];
-// echo '<br/>'.$_POST;
-
-echo '<br/><br/>';
-
 print_r($_POST);
-
-echo '<br/>';
-
-// $newstat = $_POST['status'];
 
 foreach ($_POST as $key => $entry)
 {
 
-	// here taskId is the key and the entry is the new comment that needs to be updated.
+	// here taskId is the key and the entry is the new task status that needs to be updated.
 
-	$query = "UPDATE `tasks` SET remarks='$entry' WHERE taskid='$key'";
-
-	// $query2 = "UPDATE `tasks` SET taskstatus='$newstat' WHERE taskid='$key'";
+	$query = "UPDATE `tasks` SET taskstatus='$entry' WHERE taskid='$key'";
 
 	echo $query.'<br/>';
 	// echo $query2.'<br/>';
 
 	if (mysql_query($query)) { // && mysql_query($query2)){
 
-	echo '<h1>Remarks have been updated</h1>';
+	echo '<h1>Task status have been updated</h1>';
 
 }
 
@@ -50,6 +39,5 @@ function re(){
 </script>";
 
 echo "<h3>You will now be redirected to the <a href='homepage.php'>previous page</a>.</h3>";
-
 
 ?>

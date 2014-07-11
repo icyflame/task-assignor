@@ -38,7 +38,7 @@ if(!empty($_POST)){
 			$assignor = $_SESSION['username'];
 			$add = date('Y-m-d',time());
 
-			$query = "INSERT INTO `tasks` VALUES('$taskid', '$desc', '$assignor', '$assignee', '$date', '$add', 'Not Updated')";
+			$query = "INSERT INTO `tasks` VALUES('$taskid', '$desc', '$assignor', '$assignee', '$date', '$add')";
 
 			// $query = "INSERT INTO `tasks` VALUES(".$desc.','."STR_TO_DATE(".$date.", '%m/%d/%Y')".','.$assignee.','.$assignor.')';
 
