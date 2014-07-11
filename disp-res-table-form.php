@@ -13,15 +13,20 @@ while($row = mysql_fetch_assoc($res)){
 	$rem = $row['remarks'];
 	$stat = $row['taskstatus'];
 
-	echo "<tr><td>$deadline</td><td>$desc<td>$nor</td><td>$nee</td><td>$adddate</td><td><form action='updaterem.php' method='POST'><input type='text' name='$tid' value='$rem'></input>";
+	echo "<tr>";
+	echo "<td>$deadline</td>";
+	echo "<td>$desc<td>$nor</td>";
+	echo "<td>$nee</td>";
+	echo "<td>$adddate</td>";
+	echo "<td><form action='updaterem.php' method='POST'><input type='text' name='$tid' value='$rem'></input>";
 
 	// echo "<select name='status'><option>0</option><option>1</option><option>2</option></select>";
 
-	echo "<input type='submit'></form></td>";
+	echo "<input type='submit'></form></td><td>";
 
-	include 'build-button.php';
+	include 'build-button-assignee.php';
 
-	echo "</tr>";
+	echo "</td></tr>";
 
 }
 
