@@ -6,7 +6,7 @@ if($stat == 0)
 
 elseif($stat == 1)
 
-	echo "Assignor has applied for completion.";
+	echo "Assignee has applied for completion.";
 
 elseif($stat == 2)
 
