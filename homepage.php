@@ -22,7 +22,7 @@ if(mysql_num_rows($res) == 0){
 
 else{
 
-	include('disp-res-table-form.php');
+	include('disp-res-table-assignee.php');
 
 }
 
@@ -38,7 +38,7 @@ if(mysql_num_rows($res) == 0){
 
 else{
 
-	include('disp-res-table-noform.php');
+	include('disp-res-table-assignor.php');
 
 }
 
