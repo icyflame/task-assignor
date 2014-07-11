@@ -6,10 +6,10 @@ if($stat == 0)
 
 elseif($stat == 1)
 
-	echo "Assignor has applied for completion."
+	echo "Assignor has applied for completion.";
 
 elseif($stat == 2)
 
-	echo "Task has been completed."
+	echo "Task has been completed.";
 
 ?>
